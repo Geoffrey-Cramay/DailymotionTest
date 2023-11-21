@@ -1,6 +1,7 @@
 package com.example.dailymotiontest.data.repository.di
 
 import com.example.dailymotiontest.core.VideosRepository
+import com.example.dailymotiontest.data.paging.VideoPagingDataSource
 import com.example.dailymotiontest.data.remote.VideoRemoteService
 import com.example.dailymotiontest.data.remote.VideoVideoRemoteServiceImpl
 import com.example.dailymotiontest.data.remote.VideosService
@@ -24,12 +25,18 @@ object RepositoryModule {
 
     @Provides
     @ViewModelScoped
+    fun providePagingDataSource(
+        service: VideoRemoteService,
+        parser: VideosParser
+    ): VideoPagingDataSource = VideoPagingDataSource(service, parser)
+
+    @Provides
+    @ViewModelScoped
     fun provideSongsParser(): VideosParser = VideosParserImpl
 
     @Provides
     @ViewModelScoped
     fun provideSongsRepository(
-        service: VideoRemoteService,
-        parser: VideosParser,
-    ): VideosRepository = VideosRepositoryImpl(service, parser)
+        pagingDataSource: VideoPagingDataSource,
+    ): VideosRepository = VideosRepositoryImpl(pagingDataSource)
 }

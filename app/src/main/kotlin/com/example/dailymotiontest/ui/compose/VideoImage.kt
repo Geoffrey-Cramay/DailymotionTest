@@ -1,6 +1,5 @@
 package com.example.dailymotiontest.ui.compose
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable

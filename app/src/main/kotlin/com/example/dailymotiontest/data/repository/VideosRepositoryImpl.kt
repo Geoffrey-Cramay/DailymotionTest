@@ -1,19 +1,22 @@
 package com.example.dailymotiontest.data.repository
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import com.example.dailymotiontest.core.VideosRepository
 import com.example.dailymotiontest.core.model.Video
-import com.example.dailymotiontest.data.remote.VideoRemoteService
-import com.example.dailymotiontest.data.repository.parser.VideosParser
+import com.example.dailymotiontest.data.paging.VideoPagingDataSource
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-class VideosRepositoryImpl @Inject constructor(
-    private val dataSource: VideoRemoteService,
-    private val parser: VideosParser
-) :
+class VideosRepositoryImpl @Inject constructor(private val pagingDataSource: VideoPagingDataSource) :
     VideosRepository {
-    override suspend fun getArtists(): Flow<List<Video>> = dataSource.getVideos().map { response ->
-        parser.parse(response.list)
+    override suspend fun getVideos(): Flow<PagingData<Video>> = Pager(
+        config = PagingConfig(pageSize = LIMIT),
+        pagingSourceFactory = { pagingDataSource }
+    ).flow
+
+    companion object {
+        private const val LIMIT = 10
     }
 }

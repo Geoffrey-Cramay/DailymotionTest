@@ -16,7 +16,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RemoteModule {
+object RemoteServiceModule {
     private const val BASE_URL = "https://api.dailymotion.com/"
 
     @Singleton

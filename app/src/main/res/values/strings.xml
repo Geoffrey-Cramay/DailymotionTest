@@ -23,4 +23,7 @@
         <item quantity="one">Il y a 1 an</item>
         <item quantity="other">Il y a %d ans</item>
     </plurals>
+    <string name="error_message">Une erreur est survenue</string>
+    <string name="action_retry">Rééssayer</string>
+
 </resources>
