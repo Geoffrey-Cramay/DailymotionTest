@@ -19,7 +19,7 @@ class VideoPagingDataSource(
                 data = parser.parse(response.list),
                 prevKey = null,
                 nextKey = if (response.has_more) {
-                    currentPage + 1
+                    currentPage + (params.loadSize / LIMIT)
                 } else {
                     null
                 }
@@ -31,5 +31,9 @@ class VideoPagingDataSource(
 
     override fun getRefreshKey(state: PagingState<Int, Video>): Int? {
         return state.anchorPosition
+    }
+
+    companion object {
+        const val LIMIT = 10
     }
 }

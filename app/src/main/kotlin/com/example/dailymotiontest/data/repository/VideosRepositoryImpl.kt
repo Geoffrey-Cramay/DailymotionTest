@@ -12,11 +12,7 @@ import javax.inject.Inject
 class VideosRepositoryImpl @Inject constructor(private val pagingDataSource: VideoPagingDataSource) :
     VideosRepository {
     override suspend fun getVideos(): Flow<PagingData<Video>> = Pager(
-        config = PagingConfig(pageSize = LIMIT),
+        config = PagingConfig(pageSize = VideoPagingDataSource.LIMIT),
         pagingSourceFactory = { pagingDataSource }
     ).flow
-
-    companion object {
-        private const val LIMIT = 10
-    }
 }
