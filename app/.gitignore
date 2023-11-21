@@ -1,8 +1,10 @@
 /build
 .bashrc
 .gradle
+.gradle/*
 gradle/*
 .idea
+.idea/*
 *.iml
 **/build/*
 local.properties

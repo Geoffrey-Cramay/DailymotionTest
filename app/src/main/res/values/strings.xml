@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">DailymotionTest</string>
     <string name="title">Dailymotion</string>
+    <string name="creation_time_just_now">Il y a quelques secondes</string>
+    <plurals name="creation_time_minutes_ago">
+        <item quantity="one">Il y a 1 minute</item>
+        <item quantity="other">Il y a %d minutes</item>
+    </plurals>
+    <plurals name="creation_time_hours_ago">
+        <item quantity="one">Il y a 1 heure</item>
+        <item quantity="other">Il y a %d heures</item>
+    </plurals>
+    <plurals name="creation_time_days_ago">
+        <item quantity="one">Il y a 1 jour</item>
+        <item quantity="other">Il y a %d jours</item>
+    </plurals>
+    <string name="creation_time_week_ago_one">Il y a 1 semaine</string>
+    <plurals name="creation_time_months_ago">
+        <item quantity="one">Il y a 1 mois</item>
+        <item quantity="other">Il y a %d mois</item>
+    </plurals>
+    <plurals name="creation_time_years_ago">
+        <item quantity="one">Il y a 1 an</item>
+        <item quantity="other">Il y a %d ans</item>
+    </plurals>
 </resources>
