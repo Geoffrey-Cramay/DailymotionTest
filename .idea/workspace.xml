@@ -9,42 +9,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17772f20-8565-49d9-a961-e497a2cc9644" name="Changes" comment="Init and configure project">
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/core/VideosInteractor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/core/VideosInteractorImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/core/VideosRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/core/di/InteractorModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/core/model/Video.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/VideoRemoteService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/VideoVideoRemoteServiceImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/VideosService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/di/RemoteModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/model/VideosResponse.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/remote/model/adapter/OffsetDateTimeJsonAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/repository/VideosRepositoryImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/repository/di/RepositoryModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/repository/parser/VideosParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/data/repository/parser/VideosParserImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/navigation/NavGraph.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/navigation/Screens.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/presentation/VideosListViewState.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/presentation/VideosViewModel.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/presentation/di/ViewModelModule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/presentation/mapper/VideosMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/presentation/mapper/VideosMapperImpl.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/compose/VideoImage.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/compose/VideosList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/compose/VideosListItem.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/PlayerScreen.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/VideosScreen.kt" afterDir="false" />
+    <list default="true" id="17772f20-8565-49d9-a961-e497a2cc9644" name="Changes" comment="Add Exoplayer and play video after a click on an item">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.0/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/PlayerScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/PlayerScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/VideosScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens/VideosScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/Users/g.cramay/.android/avd/Pixel_6_Pro_API_UpsideDownCake.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[76Y4C20907003835]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -53,9 +35,35 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DailymotionTest" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DailymotionTest" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DailymotionTest" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="DailymotionTest" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -85,6 +93,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "android-custom-view/Users/g.cramay/.gradle/caches/modules-2/files-2.1/androidx.media3/media3-ui/1.2.0/54814cf017446515b530aeafeec5390397f840c3/media3-ui-1.2.0-sources.jar!/androidx/media3/ui/AspectRatioFrameLayout.java_SELECTED": "AspectRatioFrameLayout",
+    "android-custom-view/Users/g.cramay/.gradle/caches/modules-2/files-2.1/androidx.media3/media3-ui/1.2.0/54814cf017446515b530aeafeec5390397f840c3/media3-ui-1.2.0-sources.jar!/androidx/media3/ui/PlayerView.java_SELECTED": "PlayerView",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "/Users/g.cramay/AndroidProjects/DailymotionTest",
     "project.structure.last.edited": "Project",
@@ -104,6 +114,8 @@
       <recent name="$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/screens" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.dailymotiontest.presentation.di" />
+      <recent name="com.example.dailymotiontest.presentation.formatter" />
       <recent name="com.example.dailymotiontest.data.remote.model.adapter" />
     </key>
   </component>
@@ -191,23 +203,122 @@
       <option name="project" value="LOCAL" />
       <updated>1700561276500</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add clean architecture chain and display video list">
+      <created>1700561345073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700561345073</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add clean architecture chain and display video list">
+      <created>1700561579612</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700561579612</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add clean architecture chain and display video list">
+      <created>1700563413104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700563413104</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add clean architecture chain and display video list">
+      <created>1700564904446</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700564904446</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add clean architecture chain and display video list">
+      <created>1700565227941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700565227941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add clean architecture chain and display video list">
+      <created>1700565485240</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700565485240</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add clean architecture chain and display video list">
+      <created>1700572077829</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700572077829</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add clean architecture chain and display video list">
+      <created>1700574618977</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700574618977</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add clean architecture chain and display video list">
+      <created>1700576496981</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700576496981</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add pagination">
+      <created>1700581545647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700581545647</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add pagination">
+      <created>1700581577425</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700581577425</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add pagination">
+      <created>1700581822662</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700581822662</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add Exoplayer and play video after a click on an item">
+      <created>1700594721570</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700594721570</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add Exoplayer and play video after a click on an item">
+      <created>1700594769024</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700594769025</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add Exoplayer and play video after a click on an item">
+      <created>1700606878762</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1700606878762</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init and configure project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init and configure project" />
+    <MESSAGE value="Add clean architecture chain and display video list" />
+    <MESSAGE value="Add pagination" />
+    <MESSAGE value="Add Exoplayer and play video after a click on an item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Exoplayer and play video after a click on an item" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/kotlin/com/example/dailymotiontest/ui/theme/Theme.kt</url>
-          <line>33</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.example.dailymotiontest.data.remote.model.VideoResponse" memberName="created_time" />

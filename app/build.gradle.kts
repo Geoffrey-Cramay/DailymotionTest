@@ -71,8 +71,10 @@ dependencies {
 
     // Hilt
     implementation ("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.media3:media3-exoplayer-hls:1.2.0")
     kapt ("com.google.dagger:hilt-android-compiler:2.43.2")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -86,6 +88,10 @@ dependencies {
     // Paging
     implementation("androidx.paging:paging-runtime:3.3.0-alpha02")
     implementation("androidx.paging:paging-compose:3.3.0-alpha02")
+
+    //Media
+    implementation("androidx.media3:media3-exoplayer:1.2.0")
+    implementation("androidx.media3:media3-ui:1.2.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

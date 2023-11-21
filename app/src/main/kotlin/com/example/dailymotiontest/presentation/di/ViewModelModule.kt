@@ -16,7 +16,7 @@ import java.time.Clock
 
 @Module
 @InstallIn(ViewModelComponent::class)
-class ViewModelModule {
+object ViewModelModule {
 
     @Provides
     @ViewModelScoped

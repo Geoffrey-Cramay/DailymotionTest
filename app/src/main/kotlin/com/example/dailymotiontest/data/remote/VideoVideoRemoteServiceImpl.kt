@@ -8,5 +8,3 @@ class VideoVideoRemoteServiceImpl @Inject constructor(private val service: Video
     override suspend fun getVideos(page: Int, limit: Int): VideosResponse =
         service.getVideos(page = page, limit = limit)
 }
-
-//on bougera le flow pour le retour du paging
