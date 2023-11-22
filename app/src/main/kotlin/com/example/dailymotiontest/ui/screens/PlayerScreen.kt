@@ -1,9 +1,9 @@
 package com.example.dailymotiontest.ui.screens
 
+import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.net.Uri
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.FrameLayout
 import androidx.annotation.OptIn
 import androidx.compose.runtime.Composable
@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.app.ComponentActivity
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
@@ -30,6 +31,8 @@ fun PlayerScreen() {
     val context = LocalContext.current
     val uri = Uri.parse("https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8")
     val configuration = LocalConfiguration.current
+    val activity = context as ComponentActivity
+    activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
 
     val exoPlayer = remember {
             ExoPlayer.Builder(context)
@@ -72,6 +75,9 @@ fun PlayerScreen() {
             }
         })
     ) {
-        onDispose { exoPlayer.release() }
+        onDispose {
+            exoPlayer.release()
+            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+        }
     }
 }
