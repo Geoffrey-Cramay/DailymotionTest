@@ -28,21 +28,11 @@ class VideosViewModel @Inject constructor(
         viewModelScope.launch {
             interactor.getVideos()
                 .cachedIn(viewModelScope)
-//                .onStart { _mutableState.update { VideosListViewState.Loading } }
-//                .catch { exception ->
-//                    Log.w(TAG, exception)
-//                    _mutableState.update { VideosListViewState.Error }
-//                }
                 .collect { videoList ->
-
                     _mutableState.update {
                         videoList.map { video -> mapper.map(video) }
                     }
                 }
         }
-    }
-
-    companion object {
-        private const val TAG = "videos_view_model"
     }
 }

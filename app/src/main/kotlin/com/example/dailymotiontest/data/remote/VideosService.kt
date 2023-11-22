@@ -12,6 +12,3 @@ interface VideosService {
         @Query("limit") limit: Int,
     ): VideosResponse
 }
-//https://api.dailymotion.com/videos
-// ?fields=thumbnail_url%2Cchannel.created_time%2Ctitle%2Cdescription%2Cid%2Cowner%2Cembed_url
-// &page=1&limit=10&context=

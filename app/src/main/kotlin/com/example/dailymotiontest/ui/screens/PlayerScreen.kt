@@ -35,20 +35,20 @@ fun PlayerScreen() {
     activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
 
     val exoPlayer = remember {
-            ExoPlayer.Builder(context)
-                .build()
-                .apply {
-                    val defaultDataSourceFactory = DefaultDataSource.Factory(context)
-                    val dataSourceFactory: DataSource.Factory = DefaultDataSource.Factory(
-                        context,
-                        defaultDataSourceFactory
-                    )
-                    val source = HlsMediaSource.Factory(dataSourceFactory)
-                        .createMediaSource(MediaItem.fromUri(uri))
-                    setMediaSource(source)
-                    prepare()
-                }
-        }
+        ExoPlayer.Builder(context)
+            .build()
+            .apply {
+                val defaultDataSourceFactory = DefaultDataSource.Factory(context)
+                val dataSourceFactory: DataSource.Factory = DefaultDataSource.Factory(
+                    context,
+                    defaultDataSourceFactory
+                )
+                val source = HlsMediaSource.Factory(dataSourceFactory)
+                    .createMediaSource(MediaItem.fromUri(uri))
+                setMediaSource(source)
+                prepare()
+            }
+    }
 
     exoPlayer.apply {
         playWhenReady = true
@@ -59,21 +59,17 @@ fun PlayerScreen() {
     DisposableEffect(
         AndroidView(
             factory = {
-            PlayerView(context).apply {
-                hideController()
-                useController = true
-                resizeMode = when (configuration.orientation) {
-                    Configuration.ORIENTATION_LANDSCAPE -> {
-                        AspectRatioFrameLayout.RESIZE_MODE_FILL
+                PlayerView(context).apply {
+                    hideController()
+                    useController = true
+                    resizeMode = when (configuration.orientation) {
+                        Configuration.ORIENTATION_LANDSCAPE -> AspectRatioFrameLayout.RESIZE_MODE_FILL
+                        else -> AspectRatioFrameLayout.RESIZE_MODE_FIT
                     }
-                    else -> {
-                        AspectRatioFrameLayout.RESIZE_MODE_FIT
-                    }
+                    player = exoPlayer
+                    layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)
                 }
-                player = exoPlayer
-                layoutParams = FrameLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT)
-            }
-        })
+            })
     ) {
         onDispose {
             exoPlayer.release()
