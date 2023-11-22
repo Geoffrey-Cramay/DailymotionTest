@@ -20,8 +20,7 @@ fun VideoImage(modifier: Modifier, viewData: VideoViewData?) {
         model = ImageRequest.Builder(LocalContext.current)
             .data(viewData?.thumbnail)
             .crossfade(true)
-            .error(R.drawable.ic_launcher_foreground)
-//            .error(R.drawable.ic_no_photo)
+            .error(R.drawable.ic_videocam_24px)
             .build(),
         placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
         contentDescription = viewData?.description,
